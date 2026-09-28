@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="garden-decor" aria-hidden="true">
+      <div class="background-hill hill-left"></div>
+      <div class="background-hill hill-right"></div>
+
+      <div class="edge-plant edge-plant-left">
+        <span class="edge-stem"></span>
+        <span class="edge-leaf edge-leaf-one"></span>
+        <span class="edge-leaf edge-leaf-two"></span>
+        <span class="edge-leaf edge-leaf-three"></span>
+      </div>
+
+      <div class="edge-plant edge-plant-right">
+        <span class="edge-stem"></span>
+        <span class="edge-leaf edge-leaf-one"></span>
+        <span class="edge-leaf edge-leaf-two"></span>
+        <span class="edge-leaf edge-leaf-three"></span>
+      </div>
+
+      <span class="tiny-flower flower-left"></span>
+      <span class="tiny-flower flower-right"></span>
+    </div>
+
     <main class="mood-seed-card">
       <h1>Mood Seed</h1>
       <p class="question">How are you feeling today?</p>
@@ -36,30 +58,37 @@
         >
           Sad
         </button>
-        <button
-          class="mood-button"
-          type="button"
-          data-mood="stressed"
-          aria-pressed="false"
-        >
-          Stressed
-        </button>
       </div>
 
-      <section class="garden" aria-label="Your seed">
+      <section class="garden" aria-label="Your mood plant">
+        <div class="sun" aria-hidden="true"></div>
+
         <div class="water-drops" aria-hidden="true">
-          <span class="drop drop-one"></span>
-          <span class="drop drop-two"></span>
-          <span class="drop drop-three"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
         </div>
 
         <div class="plant" aria-hidden="true">
-          <div class="sprout">
-            <span class="leaf leaf-left"></span>
-            <span class="leaf leaf-right"></span>
+          <div class="plant-shape">
             <span class="stem"></span>
+            <span class="leaf leaf-left leaf-upper"></span>
+            <span class="leaf leaf-right leaf-upper"></span>
+            <span class="leaf leaf-left leaf-lower"></span>
+            <span class="leaf leaf-right leaf-lower"></span>
           </div>
-          <div class="seed"></div>
         </div>
 
         <div class="soil" aria-hidden="true"></div>

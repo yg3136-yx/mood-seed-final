@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Seed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="mood-seed-card">
+      <h1>Mood Seed</h1>
+      <p class="question">How are you feeling today?</p>
+
+      <div class="mood-options" aria-label="Choose your mood">
+        <button
+          class="mood-button"
+          type="button"
+          data-mood="great"
+          aria-pressed="false"
+        >
+          Great
+        </button>
+        <button
+          class="mood-button"
+          type="button"
+          data-mood="okay"
+          aria-pressed="false"
+        >
+          Okay
+        </button>
+        <button
+          class="mood-button"
+          type="button"
+          data-mood="sad"
+          aria-pressed="false"
+        >
+          Sad
+        </button>
+        <button
+          class="mood-button"
+          type="button"
+          data-mood="stressed"
+          aria-pressed="false"
+        >
+          Stressed
+        </button>
+      </div>
+
+      <section class="garden" aria-label="Your seed">
+        <div class="water-drops" aria-hidden="true">
+          <span class="drop drop-one"></span>
+          <span class="drop drop-two"></span>
+          <span class="drop drop-three"></span>
+        </div>
+
+        <div class="plant" aria-hidden="true">
+          <div class="sprout">
+            <span class="leaf leaf-left"></span>
+            <span class="leaf leaf-right"></span>
+            <span class="stem"></span>
+          </div>
+          <div class="seed"></div>
+        </div>
+
+        <div class="soil" aria-hidden="true"></div>
+      </section>
+
+      <button class="water-button" type="button" disabled>
+        Water my seed
+      </button>
+
+      <p class="supportive-message" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

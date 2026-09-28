@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f5f0e6;
+  color: #2f4637;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.mood-seed-card {
+  width: min(100%, 520px);
+  padding: 36px 28px;
+  text-align: center;
+  background: #fffdf8;
+  border: 2px solid #d7decf;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(47, 70, 55, 0.1);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.question {
+  margin: 0 0 22px;
+  font-size: 1.15rem;
+}
+
+.mood-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.mood-button,
+.water-button {
+  border: 2px solid #78957f;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mood-button {
+  padding: 11px 14px;
+  background: #ffffff;
+  color: #2f4637;
+}
+
+.mood-button:hover,
+.mood-button:focus-visible {
+  background: #edf4e9;
+}
+
+.mood-button.selected {
+  background: #6f8f72;
+  border-color: #6f8f72;
+  color: #ffffff;
+}
+
+.garden {
+  position: relative;
+  height: 190px;
+  margin: 20px 0 8px;
+  overflow: hidden;
+}
+
+.soil {
+  position: absolute;
+  right: 50%;
+  bottom: 18px;
+  width: 190px;
+  height: 48px;
+  translate: 50% 0;
+  background: #8b6045;
+  border-radius: 50% 50% 18px 18px;
+}
+
+.plant {
+  position: absolute;
+  right: 50%;
+  bottom: 47px;
+  width: 100px;
+  height: 100px;
+  translate: 50% 0;
+  z-index: 1;
+}
+
+.seed {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 36px;
+  height: 25px;
+  translate: 50% 0;
+  background: #bd7d45;
+  border: 3px solid #70472e;
+  border-radius: 55% 45% 55% 45%;
+  transition: opacity 0.3s ease;
+}
+
+.sprout {
+  position: absolute;
+  right: 50%;
+  bottom: 4px;
+  width: 70px;
+  height: 76px;
+  translate: 50% 0;
+  opacity: 0;
+  transform: scale(0.3);
+  transform-origin: bottom center;
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+
+.stem {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 7px;
+  height: 58px;
+  translate: 50% 0;
+  background: #4f8a57;
+  border-radius: 6px;
+}
+
+.leaf {
+  position: absolute;
+  top: 12px;
+  width: 33px;
+  height: 21px;
+  background: #70a66f;
+  border: 2px solid #4f8a57;
+}
+
+.leaf-left {
+  left: 4px;
+  border-radius: 70% 20% 70% 20%;
+  rotate: 18deg;
+}
+
+.leaf-right {
+  right: 4px;
+  border-radius: 20% 70% 20% 70%;
+  rotate: -18deg;
+}
+
+.plant.grown .seed {
+  opacity: 0;
+}
+
+.plant.grown .sprout {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.water-drops {
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  width: 120px;
+  height: 115px;
+  translate: 50% 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  top: 0;
+  width: 13px;
+  height: 19px;
+  background: #69aeda;
+  border-radius: 50% 50% 55% 55%;
+  opacity: 0;
+}
+
+.drop-one {
+  left: 22px;
+}
+
+.drop-two {
+  left: 54px;
+}
+
+.drop-three {
+  left: 86px;
+}
+
+.water-drops.falling .drop {
+  animation: fall 0.8s ease-in forwards;
+}
+
+.water-drops.falling .drop-two {
+  animation-delay: 0.15s;
+}
+
+.water-drops.falling .drop-three {
+  animation-delay: 0.3s;
+}
+
+@keyframes fall {
+  0% {
+    translate: 0 0;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    translate: 0 95px;
+    opacity: 0;
+  }
+}
+
+.water-button {
+  padding: 12px 22px;
+  background: #557b60;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.water-button:hover:not(:disabled),
+.water-button:focus-visible:not(:disabled) {
+  background: #3f654a;
+}
+
+.water-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.supportive-message {
+  min-height: 24px;
+  margin: 18px 0 0;
+  font-weight: bold;
+}
+
+@media (max-width: 420px) {
+  .mood-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

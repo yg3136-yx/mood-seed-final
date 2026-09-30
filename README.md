@@ -49,6 +49,8 @@ I asked Codex to:
 
 I tested everything myself in the browser, and I made all the main design decisions based on what I saw during testing. I did not write all the code by myself.
 
+A more detailed record of selected prompt-and-response exchanges, testing decisions, and related Git commits is available in [PROCESS.md](PROCESS.md).
+
 ## 4. Selected AI Prompts
 
 Here are a few important prompts I used during development, not every single prompt.

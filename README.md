@@ -1,5 +1,7 @@
 # Mood Seed
 
+**Live Demo:** [https://yg3136-yx.github.io/mood-seed-final/](https://yg3136-yx.github.io/mood-seed-final/)
+
 ## 1. Project Overview
 
 Mood Seed is a simple emotional check-in tool that runs in your web browser.
